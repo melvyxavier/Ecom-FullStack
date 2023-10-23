@@ -1,0 +1,28 @@
+<section style="font-family: 'Bellefair', serif" class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src={{pdata.image}} alt="..." /></div>
+            <div class="col-md-6">
+
+                <h1 style="color: #b2d680;" class="display-5 fw-medium">{{pdata.pname}}</h1>
+
+                <p style="color: #b2d680;" class="lead">Rs. {{pdata.price}}</p>
+
+                <div class="d-flex">
+                    <div><button (click)="addtowishlist()" style="border: 1px solid #b2d680;color: #b2d680;"
+                            class="btn btn flex-shrink-0 me-3" type="button">Add to Wishlist
+                        </button>
+                        <button (click)="addtoCart()" style="border: 1px solid #b2d680; color: #b2d680;"
+                            class="btn btn flex-shrink-0" type="button">
+                        Add to Cart
+                        </button>
+                    </div>
+                </div>
+               
+            </div>
+
+           
+
+        </div>
+    </div>
+</section>

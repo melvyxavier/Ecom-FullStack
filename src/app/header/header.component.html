@@ -1,0 +1,17 @@
+<header style="background-color: #03371f">
+  <nav class="container mt-5 text-light">
+        <a href="" style="color: #b2d680;font-size: 50px;" class="navbar-brand">Botanica</a>
+  
+  
+       <div *ngIf="login" class="ms-auto">
+          <div (click)="cart()" style="color: #b2d680;background-color: #03371f;" class="bg-light text-dark btn p-1">
+            <h4>Cart {{count}}</h4>
+      
+  
+            </div>
+            <i (click)="toWishlist()" class="fa-solid fa-heart fa-2x text-danger me-5 btn"></i>
+  
+    <button (click)="logout()" style="color: #b2d680;" class="btn btn-outline-light">Logout</button>
+       </div>
+    </nav>
+</header>

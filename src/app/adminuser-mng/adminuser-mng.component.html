@@ -1,0 +1,28 @@
+<div>
+  <h1 style="color:#b5cb7c;" class="text-center mt-5">User Management</h1>
+</div>
+
+
+<table class="container table table-striped-columns table-light mt-5 p-5">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of users, let j=index">
+      <th scope="row">{{j+1}}</th>
+      <td class="border p-3">{{i.email}}</td>
+      <td class="border p-3 ms-5">{{i.psw}}
+        <button (click)="deleteuser(i._id)" class="btn btn-danger mt-3 ms-3 text-center"> <i
+          class="fa-solid fa-trash fa-2xs"></i></button>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>

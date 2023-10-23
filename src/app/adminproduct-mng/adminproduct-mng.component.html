@@ -1,0 +1,33 @@
+<div>
+  <h1 style="color:#b5cb7c;" class="text-center mt-5">Product Management</h1>
+</div>
+
+<div class="text-end">
+  <button (click)="addpage()" style="color: #b5cb7c;" class="btn btn-outline-light p-3 me-5">Add new Product</button>
+</div>
+<table class="container table table-striped-columns table-light mt-5 p-5">
+
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Image</th>
+      <th scope="col">Price</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of pdata, let j=index">
+      <th scope="row">{{j+1}}</th>
+      <td class="border p-3">{{i.pname}}</td>
+      <td class="border p-3">
+        <img style="height: 200px;" src={{i.image}} alt="">
+      </td>
+      <td class="border p-3">{{i.price}}</td>
+      <td>
+        <button (click)="editPage(i._id)" class="btn btn-warning mt-3 me-2"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button (click)="deleteproduct(i._id)" class="btn btn-danger mt-3"><i class="fa-solid fa-trash"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

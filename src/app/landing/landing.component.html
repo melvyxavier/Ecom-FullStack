@@ -1,0 +1,45 @@
+<div style="display: flex;align-items: center;justify-content: center;" class="text-end p-5">
+  <ul>
+    <li>
+
+      <a id="e3" class="p-3 mt-5" style="border: 2px solid rgb(255, 255, 255);text-decoration: none;height: 50px;color:#b5cb7c;" routerLink="user-login">Login as User</a>
+      <a id="e3" class="p-3 mt-5" style="border: 2px solid rgb(255, 255, 255);text-decoration: none;height: 50px;color:#b5cb7c;" routerLink="admin-login">Login as Admin</a>
+
+    </li>
+  </ul>
+</div>
+
+
+<div class="container">
+  <div class="row mb-5">
+    <div *ngFor="let i of products" class="col-lg-3 col-sm-6 mt-3">
+
+
+      <div class="card mb-5 mt-5" style="width: 100%;border: 5px double #043105;">
+        <img style="height: 250px;width: 100%;border-radius: 30px;" src={{i.image}} class="card-img-top p-3" alt="...">
+        <div style="color: #043105;" class="card-body text-center">
+          <h5 class="card-title">{{i.pname}}</h5>
+          <p class="card-text">Rs. {{i.price}}</p>
+          <a routerLink="product-view/{{i._id}}" class="btn btn-outline-success">View</a>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+<style>
+  @media (max-width: 1150px) {
+
+
+#e3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 80%; */
+}
+}
+</style>

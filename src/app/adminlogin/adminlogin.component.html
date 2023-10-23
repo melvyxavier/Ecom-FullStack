@@ -1,0 +1,60 @@
+<div id="w2">
+    <div class="container text-center">
+        <h1 class="mt-3" id="q3">Admin Login</h1>
+        <form [formGroup]="adminloginForm" class="mt-3 p-3" action="">
+            <div class="mt-2 p-2">
+    
+                <input formControlName="auname" type="text" id="l5" name="acno." placeholder="Enter User name"
+                    class="form-control text-center">
+            </div>
+    
+    
+            <div class="mt-1 p-2">
+                <input formControlName="apsw" type="password" name="pswd" placeholder="Enter Password" id="l6"
+                    class="form-control text-center">
+            </div>
+    
+    
+            <div class="mt-3 p-2">
+                <button (click)="adminlogin()" id="b1" style="color:#b5cb7c;" type="submit" class="btn btn-outline-light w-100">Login</button>
+                <br><br>
+                
+            </div>
+        </form>
+    
+    </div>
+</div>
+
+<style>
+     
+    #w2 {
+        color: #b2d680;
+        padding: 20px;
+        background-color: #03371f;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgb(0, 0, 0);
+        font-family: 'Bellefair', serif;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        margin-top: 300px;
+        position: relative;
+        top: 100%;
+        left: 50%;
+        border: #03371f 2px solid;
+
+    }
+
+    @media (max-width: 1150px) {
+
+
+        #w2 {
+            margin-left: 0;
+            width: 80%;
+
+            position: relative;
+            top: 50%;
+            left: 50%;
+        }
+    }
+</style>
+

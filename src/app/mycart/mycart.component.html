@@ -1,0 +1,40 @@
+<div>
+    <table class="container table w-75 table-striped-columns my-5 mt-5 p-5">
+
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Count</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of pdatas, let j=index">
+                <th scope="row">{{j+1}}</th>
+                <td>
+                    <h5>{{i.pname}}</h5>
+                    <img class="w-25" src={{i.image}} alt="">
+
+                </td>
+
+                <td>{{i.price}}</td>
+                <td>
+                    <button (click)="decrement(i._id)">-</button>
+                    <p class="w-25">{{i.quantity}}</p>
+                    <button (click)="increment(i._id)">+</button>
+                </td>
+
+                <td>
+                    <button (click)="remove(i._id)" class="btn btn-danger">Remove</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text-end p-5 me-5">
+        <h1>Cart Total Price = Rs. {{total}}</h1>
+    </div>
+</div>
